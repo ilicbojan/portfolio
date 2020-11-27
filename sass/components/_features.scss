@@ -37,6 +37,21 @@
         width: 100%;
       }
     }
+
+    .techs {
+      display: flex;
+      column-gap: 10px;
+
+      div {
+        border: 1px solid white;
+        padding: 3px 8px;
+        white-space: nowrap;
+      }
+    }
+
+    .desc {
+      margin: 10px 0 20px 0;
+    }
   }
 
   @include breakpoint('<=medium') {

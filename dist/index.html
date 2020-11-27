@@ -12,6 +12,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="css/main.css" />
 	<script src="https://kit.fontawesome.com/ea0e32055a.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_ZrXbEWlhUMqDaVJn6Pw9M");
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				emailjs.sendForm('portfolio-contact', 'portfolio-contact-form', this)
+					.then(function () {
+						console.log('SUCCESS!');
+						alert("Your message was sent")
+					}, function (error) {
+						console.log('FAILED...', error);
+						alert("Error")
+					});
+			});
+		}
+	</script>
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -64,8 +86,8 @@
 								class="label">LinkedIn</span></a></li>
 					<li><a href="mailto:bojan.ilic2404@gmail.com" target="_blank" class="icon solid fa-envelope"><span
 								class="label">Email</span></a></li>
+					<li><a href="tel:+381652033858" class="icon solid fa-mobile-alt"><span class="label">Phone</span></a></li>
 				</ul>
-
 			</div>
 		</section>
 
@@ -118,42 +140,79 @@
 			<section id="four" class="wrapper alt style1">
 				<div class="inner">
 					<h2 class="major">Projects</h2>
-					<p>Tekst - neki od mojih projekata...</p>
 					<section class="features">
 						<article>
-							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-							<h3 class="major">Basket league</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-external-link-alt">Demo</a></li>
-								<li><a href="#" class="button icon solid fa-code">Code</a></li>
-							</ul>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							<a href="#" target="_blank" class="image"><img src="images/sportobjects.png" alt="" /></a>
 							<h3 class="major">Sport Objects</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+							<div class="techs">
+								<div>C#</div>
+								<div>JS</div>
+								<div>.NET Core</div>
+								<div>React</div>
+							</div>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+								ultrices.</p>
 							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-external-link-alt">Demo</a></li>
-								<li><a href="#" class="button icon solid fa-code">Code</a></li>
+								<li><a href="#" target="_blank" class="button primary icon solid fa-external-link-alt">Demo</a></li>
+								<li><a href="https://github.com/ilicbojan/sport-objects" target="_blank"
+										class="button icon solid fa-code">Code</a></li>
 							</ul>
 						</article>
+
 						<article>
-							<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+							<a href="#" target="_blank" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							<h3 class="major">Basket league</h3>
+							<div class="techs">
+								<div>C#</div>
+								<div>JS</div>
+								<div>.NET Core</div>
+								<div>React</div>
+							</div>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+								ultrices.</p>
+							<ul class="actions">
+								<li><a href="#" target="_blank" class="button primary icon solid fa-external-link-alt">Demo</a></li>
+								<li><a href="https://github.com/ilicbojan/basket-league" target="_blank"
+										class="button icon solid fa-code">Code</a>
+								</li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="https://vikingr.herokuapp.com/" target="_blank" class="image"><img src="images/cinemafx.png"
+									alt="" /></a>
 							<h3 class="major">VikingR Cinema</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+							<div class="techs">
+								<div>Java</div>
+								<div>Spring Boot</div>
+								<div>Thymeleaf</div>
+							</div>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+								ultrices.</p>
 							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-external-link-alt">Demo</a></li>
-								<li><a href="#" class="button icon solid fa-code">Code</a></li>
+								<li><a href="https://vikingr.herokuapp.com/" target="_blank"
+										class="button primary icon solid fa-external-link-alt">Demo</a></li>
+								<li><a href="https://github.com/ilicbojan/cinema" target="_blank"
+										class="button icon solid fa-code">Code</a></li>
 							</ul>
 						</article>
+
 						<article>
-							<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+							<a href="https://muzio.herokuapp.com/" target="_blank" class="image"><img src="images/muziofx.png"
+									alt="" /></a>
 							<h3 class="major">Music shop</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+							<div class="techs">
+								<div>PHP</div>
+								<div>Laravel</div>
+								<div>MySQL</div>
+							</div>
+							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+								ultrices.</p>
 							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-external-link-alt">Demo</a></li>
-								<li><a href="#" class="button icon solid fa-code">Code</a></li>
+								<li><a href="https://muzio.herokuapp.com/" target="_blank"
+										class="button primary icon solid fa-external-link-alt">Demo</a></li>
+								<li><a href="https://github.com/ilicbojan/music-shop" target="_blank"
+										class="button icon solid fa-code">Code</a></li>
 							</ul>
 						</article>
 					</section>
@@ -169,19 +228,19 @@
 				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
 					tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed
 					ac elementum arcu. Quisque placerat auctor laoreet.</p>
-				<form method="post" action="#">
+				<form id="contact-form">
 					<div class="fields">
 						<div class="field">
 							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<input type="text" name="name" id="name" required />
 						</div>
 						<div class="field">
 							<label for="email">Email</label>
-							<input type="email" name="email" id="email" />
+							<input type="email" name="email" id="email" required />
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
+							<textarea name="message" id="message" rows="4" required></textarea>
 						</div>
 					</div>
 					<ul class="actions">
@@ -193,7 +252,7 @@
 						Belgrade, Serbia
 					</li>
 					<li class="icon solid fa-file"><a href="#">My Resume</a></li>
-					<li class="icon solid fa-phone"><a href="tel:0652033858">065/20-33-858</a></li>
+					<li class="icon solid fa-phone"><a href="tel:+381652033858">+381 65 20 33 858</a></li>
 					<li class="icon solid fa-envelope"><a href="mailto:bojan.ilic2404@gmail.com"
 							target="_blank">bojan.ilic2404@gmail.com</a></li>
 					<li class="icon solid brands fa-github"><a href="https://github.com/ilicbojan"
