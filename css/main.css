@@ -1961,6 +1961,15 @@ button,
       .features article .image img {
         border-radius: 5px 5px 0 0;
         width: 100%; }
+    .features article .techs {
+      display: flex;
+      column-gap: 10px; }
+      .features article .techs div {
+        border: 1px solid white;
+        padding: 3px 8px;
+        white-space: nowrap; }
+    .features article .desc {
+      margin: 10px 0 20px 0; }
   @media screen and (max-width: 980px) {
     .features article {
       margin: 1em 2em 1em 0;
