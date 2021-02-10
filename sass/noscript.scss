@@ -27,6 +27,18 @@
     }
 
     p {
+      opacity: 1;
+      @include vendor('transform', 'none');
+      @include vendor('filter', 'none');
+    }
+
+    ul.actions {
+      opacity: 1;
+      @include vendor('transform', 'none');
+      @include vendor('filter', 'none');
+    }
+
+    ul.icons {
       opacity: 01;
       @include vendor('transform', 'none');
       @include vendor('filter', 'none');
